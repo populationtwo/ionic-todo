@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
@@ -22,15 +22,39 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
-  </head>
-  <body ng-app="ionic-todo" ng-controller="main" ng-init="getTasks()">
+</head>
+<body ng-app="ionic-todo" ng-controller="main" ng-init="getTasks()">
 
-    <ion-pane>
-      <ion-header-bar class="bar-dark">
+<ion-pane>
+    <ion-header-bar class="bar-dark">
         <h1 class="title">Scotch-Todo</h1>
-      </ion-header-bar>
-      <ion-content>
-      </ion-content>
-    </ion-pane>
-  </body>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list card" ng-repeat="task in tasks track by $index">
+            <div class="item item-divider">
+                <span ng-bind="task.title"></span>
+            </div>
+            <div class="item item-body">
+                <strong>TItle: <span ng-bind="task.title"></span></strong>
+
+                <p>
+                    <span ng-bind="task.content"></span>
+                </p>
+            </div>
+
+            <item class="tabs tabs-secondary tabs-icon-left">
+                <span class="item item-checkbox">
+                    <label for="" class="checkbox">
+                        <input type="checkbox" ng-model="task.completed" ng-click="completeTask($index)">
+                    </label>
+                </span>
+                <a href="" class="tab-item assertive" ng-click="removeTask($index)">
+                    <i class="icon ion-android-close"></i>
+                </a>
+            </item>
+
+        </div>
+    </ion-content>
+</ion-pane>
+</body>
 </html>
