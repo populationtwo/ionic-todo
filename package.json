@@ -1,7 +1,7 @@
 {
   "name": "ionic-todo",
   "version": "1.1.1",
-  "description": "ionic-todo: An Ionic project",
+  "description": "ionic-todo: Mobile App with AngularJS and Ionic",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
