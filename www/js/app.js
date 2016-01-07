@@ -83,4 +83,11 @@ app.controller('main', function ($scope, $ionicModal, localStorageService) {
 
     };
 
+    $scope.openTaskModal = function() {
+        $scope.newTaskModal.show();
+    };
+
+    $scope.closeTaskModal = function() {
+        $scope.newTaskModal.hide();
+    };
 });
