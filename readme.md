@@ -8,11 +8,13 @@ I noticed the article is lack of example. I created this repo to help those who 
 ## Installation
 
 1. Clone repo
+2. run 'npm install -g cordova ionic' if you don't have it installed
 2. run 'bower install'
 
 
 ## Usage
 
+Preview
 'ionic serve --lab'
 
 ## Contributing
