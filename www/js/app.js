@@ -29,7 +29,9 @@ app.config(function (localStorageServiceProvider) {
 });
 
 app.controller('main', function ($scope, $ionicModal, localStorageService) {
-    //store the entities name in a variable var taskData = 'task';
+    //store the entities name in a variable
+
+    var taskData = 'task';
 
     //initialize the tasks scope with empty array
     $scope.tasks = [];
