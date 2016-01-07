@@ -40,23 +40,22 @@
                 <span ng-bind="task.title"></span>
             </div>
             <div class="item item-body">
-                <strong>TItle: <span ng-bind="task.title"></span></strong>
-
+                <strong>Title: <span ng-bind="task.title"></span></strong>
                 <p>
                     <span ng-bind="task.content"></span>
                 </p>
             </div>
 
-            <item class="tabs tabs-secondary tabs-icon-left">
+            <div class="item tabs tabs-secondary tabs-icon-left">
                 <span class="item item-checkbox">
-                    <label for="" class="checkbox">
+                    <label class="checkbox">
                         <input type="checkbox" ng-model="task.completed" ng-click="completeTask($index)">
                     </label>
                 </span>
-                <a href="" class="tab-item assertive" ng-click="removeTask($index)">
+                <a class="tab-item assertive" ng-click="removeTask($index)">
                     <i class="icon ion-android-close"></i>
                 </a>
-            </item>
+            </div>
 
         </div>
     </ion-content>
@@ -71,18 +70,18 @@
             </button>
         </ion-header-bar>
         <ion-content>
-            <form action="" ng-submit="createTask()">
+            <form ng-submit="createTask()">
                 <div class="list list-inset">
-                    <label for="" class="item item-input">
+                    <label class="item item-input">
                         <input ng-model="task.title" type="text" placeholder="Task title">
                     </label>
-                    <label for="" class="item item-input">
-                        <textarea ng-model="task.content" name="" id="" cols="30" rows="10"
-                                  placeholder="Task content"></textarea>
+                    <label class="item item-input">
+                        <textarea ng-model="task.content" rows="5" placeholder="Task content"></textarea>
                     </label>
                     <ul class="list">
                         <li class="item item-toggle">
-                            <label for="" class="toggle toggle-balanced">
+                            Completed?
+                            <label class="toggle toggle-balanced">
                                 <input type="checkbox" ng-model="task.completed">
                                 <div class="track">
                                     <div class="handle"></div>
@@ -90,7 +89,7 @@
                             </label>
                         </li>
                     </ul>
-                    <button class="button button-block button-positive">Create Task</button>
+                    <button type="submit" class="button button-block button-positive">Create Task</button>
                 </div>
             </form>
         </ion-content>

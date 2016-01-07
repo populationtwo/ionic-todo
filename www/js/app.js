@@ -66,11 +66,11 @@ app.controller('main', function ($scope, $ionicModal, localStorageService) {
         $scope.newTaskModal.hide();
     };
 
-    $scope.removeTask = function () {
-        //removes  a new task
+    $scope.removeTask = function (index) {
+        //removes a task
         $scope.tasks.splice(index, 1);
         localStorageService.set(taskData, $scope.tasks);
-    };
+    }
 
 
     $scope.completeTask = function () {
