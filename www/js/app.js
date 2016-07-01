@@ -73,14 +73,9 @@ app.controller('main', function ($scope, $ionicModal, localStorageService) {
     };
 
 
-    $scope.completeTask = function () {
+    $scope.completeTask = function (index) {
         //updates a task as completed
-        if (index !== -1) {
-            $scope.tasks[index].completed = true;
-        }
-
         localStorageService.set(taskData, $scope.tasks);
-
     };
 
     $scope.openTaskModal = function () {
