@@ -30,4 +30,7 @@ Preview
 
 Chris Nwamba @chrizt_n
 
+## Troubleshooting
+"Error: spawn EACCES" when running can be resolved by running the following command on the command line to give execute privileges:
 
+  `+x hooks/after_prepare/010_add_platform_class.js`
